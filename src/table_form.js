@@ -74,7 +74,7 @@ function TableForm() {
         </Modal.Body>
 
         <Modal.Footer>
-          <Button variant="secondary">Close</Button>
+          <Button variant="secondary" onClick={set_form_state(false)}>Close</Button>
           <Button variant="primary" type="submit">Save changes</Button>
         </Modal.Footer>
       </Form>
