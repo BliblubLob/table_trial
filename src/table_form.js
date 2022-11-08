@@ -13,11 +13,13 @@ function TableForm() {
   //get which row of data to become default value of form
   const input_data = table_data[form_state.index]
 
-
+  //when close button click change form state to not render
+  function handle_close(){
+      set_form_state(false)
+  }
 
   function handle_save(e) {
     e.preventDefault()
-
 
     function make_new_table_data() {
       const temp_data = table_data
@@ -74,7 +76,7 @@ function TableForm() {
         </Modal.Body>
 
         <Modal.Footer>
-          <Button variant="secondary" onClick={set_form_state(false)}>Close</Button>
+          <Button variant="secondary" onClick={handle_close}>Close</Button>
           <Button variant="primary" type="submit">Save changes</Button>
         </Modal.Footer>
       </Form>
